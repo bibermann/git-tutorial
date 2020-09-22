@@ -35,21 +35,10 @@ To correctly configure pull/push commands and seeing the Git status in your term
 
 </p></details>
 
-<details><summary>How to reset your local branch to the (rebased) remote branch</summary><p>
+<details><summary>Selectively and careful use Git features via external tools</summary><p>
 
-- Have a clean working directory.
-- Use `git reset --hard origin/BRANCH`
+Never use Git features of your IDE or another tool, if you do not exactly know to wich Git commands the tool action would map.
 
-</p></details>
-
-<details><summary>Further learning</summary><p>
-
-Make yourself familiar with interactive rebasing.
-
-</p></details>
-
-<details><summary>Know what happens when using Git features via external tools</summary><p>
-
-Never use Git features of your IDE or another tool, if you do not exactly know to wich Git commands the tool action would map. Otherwise it is difficult to de-mystify and learn understanding Git, which is necessary for more complex problems or situations that may arise.
+Otherwise it is difficult to de-mystify and learn understanding Git, which is necessary for more complex problems or situations that may arise.
 
 </p></details>
