@@ -1,5 +1,7 @@
 # [Git Tutorial](README.md)
 
+This is chapter in progress...
+
 ## Basics
 
 <details><summary>How to reset your local branch to the (rebased) remote branch</summary><p>

@@ -12,7 +12,7 @@ So that you always see:
 
 </p></details>
 
-<details><summary>Do <strong><em>not</em></strong> use <code>git pull</code></summary><p>
+<details><summary>Do not use <code>git pull</code></summary><p>
 
 Use `git fetch; git merge --ff-only origin/BRANCH` instead. That way you get an error if the remote branch was rebased. Else an unwanted merge-commit gets created, which, in case the remote branch was rebased, could re-introduce unwanted changes.
 
@@ -42,3 +42,17 @@ Never use Git features of your IDE or another tool, if you do not exactly know t
 Otherwise it is difficult to de-mystify and learn understanding Git, which is necessary for more complex problems or situations that may arise.
 
 </p></details>
+
+<details><summary>Always rebase before merging</summary><p>
+
+Merge commits must ***not*** contain any changes and only should serve for grouping batches of work.
+
+Each logical piece of change should be represented by a single commit which holds the respective meta data (commit message, author etc.). If you, f.ex., merge a worker branch into the main branch and conflicts occur, the conflict resolution would be part of the merge commit. This work may be extremely difficult and easily results in failures. But these failures are somehow hidden in the merge and unrelated to any logical piece of work. That means you have no commit message describing the change (inside of the merge commit) which would allow you to validate the work afterwards.
+
+You can avoid all this mess by rebasing the source branch onto the target branch before doing a `git merge --no-ff`. Then the conflict resolution moves to the respective commit of the source branch and the logical pieces of change keep self-contained and are not scattered into some merge commit. That also means that each bug which may be introduced by the conflict resolution is spottable, it can easily be identified by going through the commits and validated by reading the commit message.
+
+</p></details>
+
+---
+
+Next: [Working with GitLab](gitlab.md)
