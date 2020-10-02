@@ -133,4 +133,4 @@ it can easily be identified by going through the commits and validated by readin
 </p></details>
 
 ---
-General | [Merge strategies »](2-merge-strategies.md)
+General | [Review strategies »](2-review-strategies.md)
