@@ -1,6 +1,6 @@
 # [Git Tutorial](README.md)
 
-This is chapter in progress...
+This chapter is in progress...
 
 ## Basics
 
@@ -14,3 +14,6 @@ This is chapter in progress...
 ### Further learning
 
 Make yourself familiar with interactive rebasing.
+
+---
+Basics | [Best practices »](2-best-practices/README.md)

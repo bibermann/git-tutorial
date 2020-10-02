@@ -1,6 +1,6 @@
 # Git Tutorial
 
-Welcome to the Git Tutorial!
+Welcome to my Git tutorial!
 
-* [Basics](basics.md)
-* [Best practices](best-practices/README.md)
+* [Basics](1-basics.md)
+* [Best practices](2-best-practices/README.md)

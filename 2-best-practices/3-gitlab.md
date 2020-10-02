@@ -11,5 +11,4 @@ Work in progress...
 </p></details>
 
 ---
-
-Previous: [General](general.md)
+[« Merge strategies](2-merge-strategies.md) | Working with GitLab
