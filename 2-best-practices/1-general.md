@@ -23,32 +23,46 @@ it is key to carefully describe the pieces of work you have done.
 This makes it easier for reviewers or new developers to understand and verify your code
 and helps while merging, especially when conflicts arise.
 
-Basically the structure should be like this:
-- *Short subject line*
-    - Imperative mood
-    - Max 50 characters
-- Optional: *Body*
-    - Optional: *More detailed description*
-        - Max 72 characters per line
-    - Optional: *Body meta data*
-        - Header-like format
-        - See [git.wiki.kernel.org » CommitMessageConventions](https://git.wiki.kernel.org/index.php/CommitMessageConventions) for an (incomplete) list
-
-**Important:** The body has to be separated by an empty line.
-
-Example:
+Before describing the structure, let's start with an example commit message:
 ```
 Fix something serious
 
 The body should describe what was done and why, but not how.
-It should not repeat the subject line - omit the description, if there
+It should not repeat the subject line - omit this description, if there
 is nothing more to say.
 
 Closes: #123
 Co-Authored-By: Some Author <some-author@company.com>
 ```
 
-See [git.wiki.kernel.org » CommitMessageConventions](https://git.wiki.kernel.org/index.php/CommitMessageConventions) for an (incomplete) list of possible trailers.
+This message consists of two sections.
+
+First, a short *subject line*. Rules:
+- **Imperative mood**
+- Max 50 characters
+
+The subject line should summarize the commit.
+When skimming through commits, e.g. in Git log/history views,
+you only see this line and not the body.
+It's purpose is to give the reader a quick understanding
+on the change this commit introduces.
+
+Second, an optional *body*. Rules:
+- Separated from the subject by an **empty line**
+- Max 72 characters per line
+
+The body may consist of:
+- Optionally, a *more detailed description*.
+  If the subject line not sufficiently communicate
+  the change or its motivation, this is the place to do so.
+  Still, the subject line should be self-contained,
+  so the body should not be the continuation of a sentence
+  that starts in the subject line.
+- Optional *trailers* (meta data which is not part of Git)
+  in a header-like format (`Key: Value` lines)
+
+See [git.wiki.kernel.org » CommitMessageConventions](https://git.wiki.kernel.org/index.php/CommitMessageConventions)
+for an (incomplete) list of possible trailers.
 
 Further reading:
 - [theserverside.com » How to write a Git commit message properly with examples](https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines)
