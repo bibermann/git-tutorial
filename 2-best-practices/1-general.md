@@ -1,8 +1,8 @@
 # [Git Tutorial](../README.md)
 
-## [Best practices](README.md)
+## [<small>2</small> Best practices](README.md)
 
-### General
+### <small>2.1</small> General
 
 <details><summary>Configure your terminal/prompt</summary><p>
 
@@ -23,51 +23,9 @@ it is key to carefully describe the pieces of work you have done.
 This makes it easier for reviewers or new developers to understand and verify your code
 and helps while merging, especially when conflicts arise.
 
-Before describing the structure, let's start with an example commit message:
-```
-Fix something serious
-
-The body should describe what was done and why, but not how.
-It should not repeat the subject line - omit this description, if there
-is nothing more to say.
-
-Closes: #123
-Co-Authored-By: Some Author <some-author@company.com>
-```
-
-This message consists of two sections.
-
-First, a short *subject line*. Rules:
-- **Imperative mood**
-- Max 50 characters
-
-The subject line should summarize the commit.
-When skimming through commits, e.g. in Git log/history views,
-you only see this line and not the body.
-It's purpose is to give the reader a quick understanding
-on the change this commit introduces.
-
-Second, an optional *body*. Rules:
-- Separated from the subject by an **empty line**
-- Max 72 characters per line
-
-The body may consist of:
-- Optionally, a *more detailed description*.
-  If the subject line not sufficiently communicate
-  the change or its motivation, this is the place to do so.
-  Still, the subject line should be self-contained,
-  so the body should not be the continuation of a sentence
-  that starts in the subject line.
-- Optional *trailers* (meta data which is not part of Git)
-  in a header-like format (`Key: Value` lines)
-
-See [git.wiki.kernel.org » CommitMessageConventions](https://git.wiki.kernel.org/index.php/CommitMessageConventions)
-for an (incomplete) list of possible trailers.
-
-Further reading:
-- [theserverside.com » How to write a Git commit message properly with examples](https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines)
-
 </p></details>
+
+* [<small>2.1.1</small> Writing good commit messages](1.1-commit-message.md)
 
 <details><summary>Generally, do not use <code>git pull</code></summary><p>
 
@@ -138,13 +96,24 @@ But these failures then are somehow hidden in the merge and unrelated to any log
 That means you have no commit message describing the change (as part of the merge commit)
 which would allow you to validate the work afterwards.
 
-You can avoid all this mess by rebasing the source branch onto the target branch before doing a `git merge --no-ff`.
-Then the conflict resolution moves to the respective commit of the source branch and the logical pieces of change
-keep self-contained and are not scattered into some merge commit.
+You can avoid all this mess by rebasing the source branch onto the target branch:
+```bash
+git checkout SOURCE_BRANCH
+git rebase --preserve-merges TARGET_BRANCH
+```
+
+Before doing a non-fast-forward merge:
+```bash
+git checkout TARGET_BRANCH
+git merge --no-ff SOURCE_BRANCH
+```
+
+Then the conflict resolution moves to the respective commit of the source branch (while doing the rebase)
+and the logical pieces of change keep self-contained and are not scattered into some merge commit.
 That also means that each bug which may be introduced by the conflict resolution is spottable,
 it can easily be identified by going through the commits and validated by reading the commit message.
 
 </p></details>
 
 ---
-General | [Review strategies »](2-review-strategies.md)
+<small>2.1</small> General | [<small>2.2</small> Review strategies »](2-review-strategies.md)

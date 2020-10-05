@@ -2,7 +2,7 @@
 
 This chapter is in progress...
 
-## Basics
+## <small>1</small> Basics
 
 <details><summary>How to reset your local branch to the (rebased) remote branch</summary><p>
 
@@ -16,4 +16,4 @@ This chapter is in progress...
 Make yourself familiar with interactive rebasing.
 
 ---
-Basics | [Best practices »](2-best-practices/README.md)
+<small>1</small> Basics | [<small>2</small> Best practices »](2-best-practices/README.md)
