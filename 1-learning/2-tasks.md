@@ -10,7 +10,7 @@ For each task, try to think about how to achive it and then open the solution to
 <details><summary>How to reset your local branch to the (rebased) remote branch</summary><p>
 
 - Have a clean working directory.
-- Use `git reset --hard origin/BRANCH`
+- Use `git reset --hard @{u}`
 
 </p></details>
 
