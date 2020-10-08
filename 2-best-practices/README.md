@@ -9,4 +9,4 @@ Here, you find the conclusions of all my learnings while using Git in different 
 * [<small>2.3</small> Working with GitLab](3-gitlab.md)
 
 ---
-[« <small>1</small> Basics](../1-basics.md) | <small>2</small> Best practices
+[« <small>1</small> Learning](../1-learning/README.md) | <small>2</small> Best practices

@@ -1,6 +1,6 @@
 # Git Tutorial
 
-Welcome to my Git tutorial!
+Here you find several resources, hints and workflows to effectively work with Git.
 
-* [Basics](1-basics.md)
+* [Learning](1-learning/README.md)
 * [Best practices](2-best-practices/README.md)
